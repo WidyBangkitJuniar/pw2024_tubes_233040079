@@ -1,0 +1,108 @@
+.warna1 {
+  background-color: rgb(65, 60, 105);
+}
+
+.warna2 {
+  background-color: rgb(74, 71, 163);
+}
+
+.warna3 {
+  background-color: rgb(112, 159, 176);
+}
+
+.warna4 {
+  background-color: rgb(167, 197, 235);
+}
+
+.banner {
+  height: 91vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)),
+    url("../image/banner\(background_halaman_web\).jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.highlighted-kategori {
+  height: 250px;
+}
+
+.kategori-1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../image/art_the_flash.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.kategori-2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../image/art_muka5.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.kategori-3 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../image/art_pemandangan1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.no-decoration {
+  text-decoration: none;
+  color: white;
+}
+
+.no-decoration:hover {
+  color: rgb(1, 132, 213);
+}
+
+.tentang-kami {
+  background-color: rgb(136, 136, 253);
+}
+
+.text-harga {
+  font-size: 23px;
+}
+.image-box {
+  height: 300px;
+}
+
+.image-box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.content-subscribe {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.icons {
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+  padding-right: 5px;
+}
+
+.icons:hover {
+  transition: 0.3s;
+  color: rgba(78, 78, 255, 0.913);
+}
+
+.banner2 {
+  height: 40vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)),
+    url("../image/banner\(background_halaman_web\).jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.produk-terkait-image {
+  width: 100%;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center;
+}
