@@ -64,23 +64,23 @@ $jumlahKategori = mysqli_num_rows($queryKategori);
                     $jumlahDataKategoriBaru = mysqli_num_rows($queryEx);
 
                     if($jumlahDataKategoriBaru > 0){
-                        ?>
+            ?>
                             <div class="alert alert-warning mt-1" role="alert">
                                 Kategori Sudah Ada!
                             </div>
-                        <?php
+            <?php
                     }
                     else{
                         $querySimpan = mysqli_query($con, "INSERT INTO kategori (nama) VALUE ('$kategori')");
                         
                         if($querySimpan){
-                            ?>
+            ?>
                                 <div class="alert alert-primary mt-1" role="alert">
                                     Kategori Berhasil Di Tambahkan!
                                 </div>
 
                                 <meta http-equiv="refresh" content="2; url=kategori.php" />
-                            <?php
+            <?php
                         }
                         else{
                             echo mysqli_error($con);

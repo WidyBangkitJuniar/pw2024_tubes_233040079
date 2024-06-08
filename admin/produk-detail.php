@@ -91,14 +91,14 @@
                     <select name="ketersediaan" id="ketersediaan" class="form-control">
                         <option value="<?= $data['ketersediaan']; ?>"><?= $data['ketersediaan']; ?></option>
                         <?php
-                            if($data['ketersediaan']=='tersedia'){
+                            if($data['ketersediaan']=='Tersedia'){
                         ?>
-                                <option value="habis">Habis</option>
+                                <option value="habis" value="Habis">Habis</option>
                         <?php
                             }
                             else {
                         ?>
-                                <option value="tersedia">Tersedia</option>
+                                <option value="tersedia" value="Tersedia">Tersedia</option>
                         <?php
                             }
                         ?>
@@ -113,6 +113,7 @@
 
             <?php
                 if(isset($_POST['simpan'])) {
+                    // var_dump("UBAH"); die();
                     $nama = htmlspecialchars($_POST['nama']);
                     $kategori = htmlspecialchars($_POST['kategori']);
                     $harga = htmlspecialchars($_POST['harga']);
@@ -130,42 +131,46 @@
                     if($nama=='' || $kategori=='' || $harga=='') {
             ?>
                         <div class="alert alert-warning mt-3" role="alert">
-                            Nama, Kategori dan Harga wajin diisi!
+                             Nama, Kategori dan Harga wajib diisi!
                         </div>
             <?php
                     }
                     else {
-                        $queryUpdate = mysqli_query($con, "UPDATE produk SET kategori='$kategori', nama='$nama', harga='$harga', detail='$detail', ketersediaan='$ketersediaan' WHERE id='$id'");
+                        
+                        $queryUpdate = mysqli_query($con, "UPDATE produk SET kategori_id='$kategori', nama='$nama', harga='$harga', detail='$detail', ketersediaan='$ketersediaan' WHERE id='$id'");
 
-                        if($nama_file!='') {
-                            if($image_size > 500000) {
+                        if(isset($_FILES['foto'])) {
+                            if($nama_file!='') {
+                                if($image_size > 500000) {
             ?>
-                                <div class="alert alert-warning mt3" role="alert">
-                                    File tidak boleh lebih dari 500kb!
-                                </div>
-            <?php
-                            }
-                            else {
-                                if($imageFileType != 'jpg' && $imageFileType != 'png') {
-            ?>
-                                    <div class="alert alert-warning mt-3" role="alert">
-                                        File wajib bertipe jpg atau png!
+                                    <div class="alert alert-warning mt3" role="alert">
+                                        File tidak boleh lebih dari 500kb!
                                     </div>
             <?php
                                 }
                                 else {
-                                    move_uploaded_file($_FILES["foto"]["tmp_name"], $target_dir . $new_name);
-
-                                    $queryUpdate = mysqli_query($con, "UPDATE produk SET foto='$new_name' WHERE id='$id'");
-
-                                    if($queryUpdate) {
+                                    if($imageFileType != 'jpg' && $imageFileType != 'png') {
             ?>
-                                        <div class="alert alert-primary mt-3" role="alert">
-                                            Lukisan Berhasil Diupdate!
+                                        <div class="alert alert-warning mt-3" role="alert">
+                                            File wajib bertipe jpg atau png!
                                         </div>
-
-                                        <meta http-equiv="refresh" content="2; url=produk.php" />
             <?php
+                                    }
+                                    else {
+                                        move_uploaded_file($_FILES["foto"]["tmp_name"], $target_dir . $new_name);
+
+                                        $queryUpdate = mysqli_query($con, "UPDATE produk SET foto='$new_name' WHERE id='$id'");
+
+                                        if($queryUpdate) {
+                                            
+            ?>
+                                            <div class="alert alert-primary mt-3" role="alert">
+                                                Lukisan Berhasil Diupdate!
+                                            </div>
+
+                                            <meta http-equiv="refresh" content="2; url=produk.php" />
+            <?php
+                                        }
                                     }
                                 }
                             }

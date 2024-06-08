@@ -97,8 +97,8 @@
                 <div>
                     <label for="ketersediaan">Ketersediaan</label>
                     <select name="ketersediaan" id="ketersediaan" class="form-control">
-                        <option value="tersedia">Tersedia</option>
-                        <option value="habis">Habis</option>
+                        <option value="Tersedia">Tersedia</option>
+                        <option value="Habis">Habis</option>
                     </select>
                 </div>
 
@@ -138,6 +138,7 @@
                                     File tidak boleh lebih dari 500kb!
                                 </div>
             <?php
+                                exit();
                             }
                             else {
                                 if($imageFileType != 'jpg' && $imageFileType != 'png') {
@@ -146,6 +147,7 @@
                                         File wajib bertipe jpg atau png!
                                     </div>
             <?php
+                                    exit();
                                 }
                                 else {
                                     move_uploaded_file($_FILES["foto"]["tmp_name"], $target_dir . $new_name);
@@ -162,7 +164,7 @@
                                 Lukisan Berhasil Ditambahkan!
                             </div>
     
-                            <!-- <meta http-equiv="refresh" content="2; url=produk.php"/> -->
+                            <meta http-equiv="refresh" content="2; url=produk.php"/>
             <?php
                         }
                         else {

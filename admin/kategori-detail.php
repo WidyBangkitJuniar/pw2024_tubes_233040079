@@ -41,32 +41,32 @@
                     $kategori = htmlspecialchars($_POST['kategori']);
 
                     if($data['nama']==$kategori){
-                        ?>
+            ?>
                             <meta http-equiv="refresh" content="0; url=kategori.php" />
-                        <?php
+            <?php
                     }
                     else{
                         $query = mysqli_query($con, "SELECT * FROM kategori WHERE nama = '$kategori'");
                         $jumlahData = mysqli_num_rows($query);
                         
                         if($jumlahData > 0){
-                            ?>
+            ?>
                                 <div class="alert alert-warning mt-1" role="alert">
                                     Kategori Sudah Ada!
                                 </div>
-                            <?php
+            <?php
                         }
                         else{
                             $querySimpan = mysqli_query($con, "UPDATE kategori SET nama = '$kategori' WHERE id = '$id'");
 
                             if($querySimpan){
-                                ?>
+            ?>
                                     <div class="alert alert-primary mt-1" role="alert">
                                         Kategori Berhasil Diedit!
                                     </div>
     
                                     <meta http-equiv="refresh" content="2; url=kategori.php" />
-                                <?php
+            <?php
                             }
                             else{
                                 echo mysqli_error($con);
@@ -80,24 +80,24 @@
                     $dataCount = mysqli_num_rows($queryCheck);
                     
                     if($dataCount > 0) {
-                        ?>
+            ?>
                             <div class="alert alert-warning mt-1" role="alert">
                                 Kategori tidak bisa dihapus, karena sudah digunakan di Lukisan!
                             </div>
-                        <?php
+            <?php
                         die();
                     }
 
                     $queryHapus = mysqli_query($con, "DELETE FROM kategori WHERE id = '$id'");
                     
                     if($queryHapus){
-                        ?>
+            ?>
                             <div class="alert alert-primary mt-1" role="alert">
                                 Kategori Berhasil  Dihapus
                             </div>
 
                             <meta http-equiv="refresh" content="2; url=kategori.php" />
-                        <?php
+            <?php
                     }
                     else{
                         echo mysqli_error($con);   

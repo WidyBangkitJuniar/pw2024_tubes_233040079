@@ -1,5 +1,4 @@
 <?php
-
     // Koneksi ke database
     require "koneksi.php";
 
