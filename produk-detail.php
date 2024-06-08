@@ -8,7 +8,7 @@
     $queryProduk = mysqli_query($con, "SELECT * FROM produk WHERE nama='$nama'");
     $produk = mysqli_fetch_array($queryProduk);
 
-    // Mengambil semua data dari tabel produk di tabel produk
+    // Mengambil data kategori yang di batas
     $queryProdukTerkait =mysqli_query($con, "SELECT * FROM produk WHERE kategori_id='$produk[kategori_id]' AND id!= '$produk[id]' LIMIT 4");
 
 ?>

@@ -23,8 +23,8 @@
     <!-- Search -->
     <div class="container-fluid banner d-flex align-items-center">
         <div class="container text-center text-white">
-            <h1>Toko Online Lukisan</h1>
-            <h3>Mau Cari Apa?</h3>
+            <h1>Selamat Datang</h1>
+            <h3>Di Toko Online Lukisan Kami</h3>
             <div class="col-md-8 offset-md-2">
                 <form method="get" action="produk.php">
                     <div class="input-group input-group-lg my-4">

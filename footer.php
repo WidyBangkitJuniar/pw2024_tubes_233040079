@@ -11,9 +11,6 @@
                 <div class="col-sm-1 d-flex justify-content-center mb-2">
                     <a href="https://twitter.com/widy_bangkit"> <i class="icons fab fa-x-twitter fs-2"></i></a>
                 </div>
-                <div class="col-sm-1 d-flex justify-content-center mb-2">
-                    <a href="https://wa.me/6282124943674"><i class="icons fab fa-whatsapp fs-2"></i></a>
-                </div>
             </div>
         </div>
     </div>
