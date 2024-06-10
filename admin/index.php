@@ -62,7 +62,7 @@ $jumlahProduk = mysqli_num_rows($queryProduk);
                 </li>
             </ol>
         </nav>
-        <h2>Halo <?= $_SESSION['username']; ?></h2>
+        <h2>Halo <?= $_SESSION["username"]; ?></h2>
         
         <div class="container mt-5">
             <div class="row">

@@ -14,6 +14,9 @@
                 <li class="nav-item me-4">
                     <a class="nav-link" href="produk.php">Lukisan</a>
                 </li>
+                <li class="nav-item me-4">
+                    <a class="nav-link" href="logout.php">Logout</a>
+                </li>
             </ul>
         </div>
     </div>

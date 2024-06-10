@@ -25,14 +25,6 @@
         <div class="container text-center text-white">
             <h1>Selamat Datang</h1>
             <h3>Di Toko Online Lukisan Kami</h3>
-            <div class="col-md-8 offset-md-2">
-                <form method="get" action="produk.php">
-                    <div class="input-group input-group-lg my-4">
-                        <input type="text" class="form-control" placeholder="Nama Lukisan" aria-label="Recipient's username" aria-describedby="basic-addon2" name="keyword">
-                        <button type="submit" class="btn btn-primary text-white">Telusuri</button>
-                    </div>
-                </form>
-            </div>
         </div>
     </div>
 
@@ -153,5 +145,8 @@
 
 <!-- font awesome -->
 <script src="https://kit.fontawesome.com/c7fe0a8bea.js" crossorigin="anonymous"></script>
+
+<!--  -->
+<script src="js/script.js"></script>
 </body>
 </html>
