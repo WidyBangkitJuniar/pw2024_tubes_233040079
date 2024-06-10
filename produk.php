@@ -70,7 +70,7 @@
                     <?php
                         }
                     ?>
-                </ul>
+                </ul>x
             </div>
             <div class="col-lg-9 text-center">
                 <h3 class="text-center mb-3">Lukisan</h3>
